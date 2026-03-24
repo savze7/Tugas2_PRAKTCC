@@ -1,3 +1,5 @@
+Izin menggunakan template dari mas wijdan
+
 # Dokumentasi
 File ini dibuat untuk membantu memahami konsep database dan ORM di Node.js menggunakan Sequelize.
 
