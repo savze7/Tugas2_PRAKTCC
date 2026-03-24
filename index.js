@@ -1,32 +1,37 @@
 // Import Package dan File
 const express = require("express");
 const sequelize = require("./config/database");
-const userRoutes = require("./routes/userRoutes");
+const noteRoutes = require("./routes/noteRoutes");
 
 // Inisialisasi Express dan Cors
 const app = express();
 const cors = require("cors");
+const path = require("path");
 
-// Izinkan origin frontend lokal yang umum dipakai saat development
+// CORS
 app.use(cors({
-  origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500'],
+  origin: ['http://localhost', 'http://localhost:3000', 'http://127.0.0.1:5500'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true // Jika butuh kirim cookie/session
+  credentials: true
 }));
 
-// Middleware untuk parsing JSON
+// Middleware
 app.use(express.json());
 
-// Route dasar untuk testing
+app.use(express.static(path.join(__dirname, "frontend")));
+
+// Route dasar
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Notes API is running");
 });
 
-// Setting Routes
-require("./schema/User"); // Untuk generate Tabel Users
-app.use("/api/v1/users", userRoutes); // Untuk setting routes user
+// 🔥 PENTING: Load schema NOTE (bukan user lagi)
+require("./schema/Note");
 
-// Sync Database dan Jalankan Server
+// 🔥 Ganti route jadi NOTES
+app.use("/api/v1/notes", noteRoutes);
+
+// Sync DB & Run server
 const port = process.env.PORT || 3000;
 sequelize.sync().then(() => {
   console.log("Database synced");

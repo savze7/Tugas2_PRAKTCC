@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.container {
+  width: 600px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #456ea0;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.note h3 {
+  margin: 0 0 5px;
+}
+
+.note p {
+  margin: 0 0 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete {
+  background: red;
+}
+
+.edit {
+  background: orange;
+}

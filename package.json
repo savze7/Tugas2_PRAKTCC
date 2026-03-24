@@ -1,7 +1,7 @@
 {
   "name": "sequalize_tutorial",
   "version": "1.0.0",
-  "description": "",
+  "description": "File ini dibuat untuk membantu memahami konsep database dan ORM di Node.js menggunakan Sequelize.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -15,8 +15,16 @@
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "mysql2": "^3.17.3",
+    "mysql2": "^3.20.0",
     "nodemon": "^3.1.13",
-    "sequelize": "^6.37.7"
-  }
+    "sequelize": "^6.37.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simad9/praktikum_tcc_2025-2026.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Simad9/praktikum_tcc_2025-2026/issues"
+  },
+  "homepage": "https://github.com/Simad9/praktikum_tcc_2025-2026#readme"
 }
