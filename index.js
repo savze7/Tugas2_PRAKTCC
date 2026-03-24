@@ -17,7 +17,6 @@ app.use(cors({
 
 // Middleware
 app.use(express.json());
-
 app.use(express.static(path.join(__dirname, "frontend")));
 
 // Route dasar
@@ -25,10 +24,8 @@ app.get("/", (req, res) => {
   res.send("Notes API is running");
 });
 
-// 🔥 PENTING: Load schema NOTE (bukan user lagi)
+// Setting Routes
 require("./schema/Note");
-
-// 🔥 Ganti route jadi NOTES
 app.use("/api/v1/notes", noteRoutes);
 
 // Sync DB & Run server
