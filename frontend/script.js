@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api/v1/notes";
+const API = "http://104.154.66.152:3000/api/v1/notes";
 
 let editId = null;
 
