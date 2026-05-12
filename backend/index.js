@@ -1,26 +1,12 @@
 const express = require("express");
-const sequelize = require("./config/database");
-const noteRoutes = require("./routes/noteRoutes");
-const cors = require("cors");
-
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
-  res.send("Notes API is running");
+  res.send("OK HIDUP");
 });
 
-require("./schema/Note");
-app.use("/api/v1/notes", noteRoutes);
-
-const port = process.env.PORT || 8080;
-
-app.listen(port, "0.0.0.0", () => {
-  console.log(`Server running on port ${port}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log("SERVER HIDUP DI " + PORT);
 });
-
-// sequelize.sync()
-//   .then(() => console.log("Database synced"))
-//   .catch((err) => console.error("DB ERROR:", err));
