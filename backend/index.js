@@ -21,6 +21,6 @@ app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`);
 });
 
-sequelize.sync()
-  .then(() => console.log("Database synced"))
-  .catch((err) => console.error("DB ERROR:", err));
+// sequelize.sync()
+//   .then(() => console.log("Database synced"))
+//   .catch((err) => console.error("DB ERROR:", err));
