@@ -1,4 +1,4 @@
-const noteModel = require("../models/noteModels");
+const noteModel = require("../../models/noteModels");
 
 // GET semua notes
 const getAllNotes = async (req, res) => {
@@ -26,6 +26,8 @@ const getNoteById = async (req, res) => {
 // CREATE note
 const createNote = async (req, res) => {
   try {
+    console.log("REQ BODY:", req.body); // 🔥 DEBUG
+
     const { judul, isi } = req.body;
 
     const newNote = await noteModel.create({
@@ -35,6 +37,7 @@ const createNote = async (req, res) => {
 
     res.status(201).json(newNote);
   } catch (error) {
+    console.error("ERROR:", error); // 🔥 DEBUG
     res.status(500).json({ message: error.message });
   }
 };

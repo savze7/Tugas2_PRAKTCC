@@ -1,5 +1,3 @@
-console.log("ini ja;am");
-
 // Import Package dan File
 const express = require("express");
 const sequelize = require("./config/database");
