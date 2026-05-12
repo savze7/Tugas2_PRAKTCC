@@ -1,4 +1,4 @@
-const API = "http://104.154.66.152:3000/api/v1/notes";
+const API = "https://backend-820401822458.us-central1.run.app/api/v1/notes";
 
 let editId = null;
 
